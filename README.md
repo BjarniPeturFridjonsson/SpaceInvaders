@@ -1,7 +1,11 @@
-# Space invaders!
+# Space invaders! And now with 3 player
 Space Invaders clone built in pure C# and no frameworks.
 
 Uses .Net Framework 3.5 and a few features from there but was originally developed for .net 1.1 (started in VB classic)
+
+This code is here because I was talking to my daughters about computer games and mentioned that I had made Space Invaders clone and they really wanted to try it out.
+
+So digging around I found it and added a 3 player version so we could have a little simple fun together.
 
 ## Why another Space Invaders clone.
 In a darker age we couldn't just Stack Overflow things.
