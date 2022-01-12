@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4B0D5778-7755-4C9E-AD8A-86F0E2D15C5B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SpaceInvadersDotNet</RootNamespace>
+    <AssemblyName>SpaceInvadersDotNet</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DirectorEnemies.cs" />
+    <Compile Include="DirectorPlayer.cs" />
+    <Compile Include="DirectorScreen.cs" />
+    <Compile Include="Enums\Characters.cs" />
+    <Compile Include="Enums\CharacterState.cs" />
+    <Compile Include="Enums\GameState.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game.cs" />
+    <Compile Include="GameItems\Alien.cs" />
+    <Compile Include="GameItems\BaseItem.cs" />
+    <Compile Include="GameItems\Bomb.cs" />
+    <Compile Include="GameItems\Enemy.cs" />
+    <Compile Include="GameItems\Player.cs" />
+    <Compile Include="GameItems\Shield.cs" />
+    <Compile Include="GameItems\ShoreLine.cs" />
+    <Compile Include="GameItems\Torpedo.cs" />
+    <Compile Include="Helpers\Common.cs" />
+    <Compile Include="Helpers\EnemyHelper.cs" />
+    <Compile Include="Helpers\FontHelper.cs" />
+    <Compile Include="Helpers\ImageHelpers.cs" />
+    <Compile Include="Helpers\LevelHelper.cs" />
+    <Compile Include="Helpers\NumberHelper.cs" />
+    <Compile Include="Helpers\PlayerHelper.cs" />
+    <Compile Include="InputHandler.cs" />
+    <Compile Include="Models\ScoreValueDto.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\BaseScreen.cs" />
+    <Compile Include="Screens\CurrentLevelScreen.cs" />
+    <Compile Include="Screens\GameOverScreen.cs" />
+    <Compile Include="Screens\GamePausedScreen.cs" />
+    <Compile Include="Screens\LevelPopupScreen.cs" />
+    <Compile Include="Screens\LivesScreen.cs" />
+    <Compile Include="Screens\ScoreScreen.cs" />
+    <Compile Include="Screens\StartScreen.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\C64.TTF">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ArchlightGames.ICO" />
+    <None Include="Resources\alien_2.gif" />
+    <None Include="Resources\alien_1.gif" />
+    <None Include="Resources\shield.gif" />
+    <None Include="Resources\player.gif" />
+    <None Include="Resources\invader_3_2.gif" />
+    <None Include="Resources\invader_3_1.gif" />
+    <None Include="Resources\invader_2_2.gif" />
+    <None Include="Resources\invader_2_1.gif" />
+    <None Include="Resources\invader_1_2.gif" />
+    <None Include="Resources\invader_1_1.gif" />
+    <None Include="Resources\explosion.gif" />
+    <None Include="Resources\alien_5.gif" />
+    <None Include="Resources\alien_4.gif" />
+    <None Include="Resources\alien_3.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
